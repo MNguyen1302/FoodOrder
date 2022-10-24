@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bee Food"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order now!"
+        android:textSize="18sp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/tvTitle"
+        android:background="@drawable/border_circle" />
+    
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/border_layout">
+        
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/icon_search"/>
+
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:text="Search..."
+            android:textColor="@color/grey"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/drinks_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Drinks"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View all"
+            android:layout_marginLeft="190dp"
+            android:layout_toRightOf="@+id/drinks_title"
+            android:layout_gravity="center_vertical"
+            android:textSize="17dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tb_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:stretchColumns="0,1,2">
+
+        <TableRow
+            android:layout_marginBottom="10dp">
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="20dp"
+                android:text="Signatured"
+                android:drawableLeft="@drawable/icon_signatured"
+                android:background="@drawable/border_drink"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:text="Iced Coffee"
+                android:drawableLeft="@drawable/icon_ice"
+                android:background="@drawable/border_drink"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null"/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="20dp"
+                android:text="Hot Coffee"
+                android:drawableLeft="@drawable/icon_cafe"
+                android:background="@drawable/border_drink"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:text="Chocolate"
+                android:drawableLeft="@drawable/icon_chocolate"
+                android:background="@drawable/border_drink"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null"/>
+        </TableRow>
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/lv_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:divider="@null"/>
+</RelativeLayout>
